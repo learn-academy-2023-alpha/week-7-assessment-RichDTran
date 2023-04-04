@@ -65,30 +65,30 @@ const { number } = require("yargs");
   
 // a) Create a test with an expect statement using the variable provided.
 
-// const people = [
-//   { name: "ford prefect", occupation: "a hitchhiker." },
-//   { name: "zaphod beeblebrox", occupation: "president of the galaxy." },
-//   { name: "arthur dent", occupation: "a radio employee." }
-// ]
+const people = [
+  { name: "ford prefect", occupation: "a hitchhiker." },
+  { name: "zaphod beeblebrox", occupation: "president of the galaxy." },
+  { name: "arthur dent", occupation: "a radio employee." }
+]
 
 
-// var capitalizeString = (string) => string[0].toUpperCase() + 
-// string.slice(1).toLowerCase();
+var capitalizeString = (string) => string[0].toUpperCase() + 
+string.slice(1).toLowerCase();
 
-// const objectCap = (array) => {
-// var words = (Object.values(array)).map((value) => {
-//   return (value.name.split(" ").map(capitalizeString).join(" ").concat(' is ').concat(value.occupation))})
-// console.log (words)
-// return  words
-// }
+const objectCap = (array) => {
+var words = (Object.values(array)).map((value) => {
+  return (value.name.split(" ").map(capitalizeString).join(" ").concat(' is ').concat(value.occupation))})
+console.log (words)
+return  words
+}
 
 
 
-// describe("objectCap", () => {
-//   it ("returns an array with a sentence about each person with their name capitalized", () => {
-//     expect(objectCap(people)).toEqual(["Ford Prefect is a hitchhiker.", "Zaphod Beeblebrox is president of the galaxy.", "Arthur Dent is a radio employee."])
-//   })
-// })
+describe("objectCap", () => {
+  it ("returns an array with a sentence about each person with their name capitalized", () => {
+    expect(objectCap(people)).toEqual(["Ford Prefect is a hitchhiker.", "Zaphod Beeblebrox is president of the galaxy.", "Arthur Dent is a radio employee."])
+  })
+})
 // Expected output: ["Ford Prefect is a hitchhiker.", "Zaphod Beeblebrox is president of the galaxy.", "Arthur Dent is a radio employee."]
 
 // b) Create the function that makes the test pass.
@@ -121,17 +121,17 @@ const { number } = require("yargs");
 //  for (let i = 0; i < array.length; i++)
 //   if (array[i] !== "" || true || false)
 
-// const byThree = (array) => {
-//   return array.filter((value) =>{
-//   return typeof value === "number"}).map (value => value %3)
-// }
+const byThree = (array) => {
+  return array.filter((value) =>{
+  return typeof value === "number"}).map (value => value %3)
+}
 
-// describe("byThree", () => {
-//   it ("returns an array of only the REMAINDERS of the numbers when divided by 3.", () => {
-//     expect(byThree(hodgepodge1)).toEqual([ 2, 0, -1, 0 ])
-//     expect(byThree(hodgepodge2)).toEqual([ 2, 1, -1 ])
-//   })
-// })
+describe("byThree", () => {
+  it ("returns an array of only the REMAINDERS of the numbers when divided by 3.", () => {
+    expect(byThree(hodgepodge1)).toEqual([ 2, 0, -1, 0 ])
+    expect(byThree(hodgepodge2)).toEqual([ 2, 1, -1 ])
+  })
+})
 // b) Create the function that makes the test pass.
 
 // --------------------3) Create a function that takes in an array of numbers and returns the sum of all the numbers cubed.

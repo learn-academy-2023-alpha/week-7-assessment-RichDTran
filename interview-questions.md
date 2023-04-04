@@ -8,15 +8,16 @@ Then, research the question to expand on your answer. Even if you feel you have 
 
 1. As a developer, I am creating a Rails application with a model called Cohort that has_many students, but OOPS! I forgot to add the foreign key. How can I fix this mistake? What is the name of the foreign key? Would the foreign key be on the Cohort model or the Student model?
 
-Your answer:In the rails console we would use Cohort_id.create. The name of the foreign key will always be the modelname_id. It would be on the Cohort because that holes the foreign key and belongs_to would be the Student Model.
+Your answer:In the rails console we would use Cohort_id.create. The name of the foreign key will always be the modelname_id. It would be on the Cohort because that holds the foreign key and belongs_to would be the Student Model.
 
-Researched answer:
+Researched answer:One model will belong to another model by belongs_to. and for many econnections with another model we use has_many this way why can create the foreign key if we forgot too.
 
 2. Which RESTful routes must always be passed params? Why?
 
 Your answer:CRUD = Create, Read, Update, and Delete because this is the main structure needed for the backend development. So users/developers are able to create new data, and able to view (read) the data, make changes(update) to the data, and finally remove(delete) data.
 
-Researched answer:
+Researched answer: GET, PUT, POST, PATCH, TRACE,  AND DELETE
+to be able to access that value and creates a path for these routes to be used. YOu may have as many parameters as you want.
 
 3. Name three rails generator commands. What is created by each?
 
